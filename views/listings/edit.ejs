@@ -1,0 +1,121 @@
+<% layout('layouts/boilerplate') %>
+
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <br />
+      <h3>Edit your Listing</h3>
+
+      <form
+        method="POST"
+        action="/listings/<%= listing._id %>?_method=PUT"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <!-- Listing Title -->
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input
+            type="text"
+            name="listing[title]"
+            value="<%= listing.title %>"
+            class="form-control"
+            required
+          />
+          <!--Success message (vaild-feedback)-->
+          <div class="valid-feedback">Title looks good!</div>
+          <!--Failure message (invalid-feedback)-->
+          <div class="invalid-feedback">Please enter a valid title!</div>
+        </div>
+
+        <!-- Description -->
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea
+            name="listing[description]"
+            placeholder="Enter description"
+            rows="5"
+            cols="30"
+            class="form-control"
+            required
+          >
+<%= listing.description %></textarea
+          >
+          <!--Success message (valid-feedback)-->
+          <div class="valid-feedback">Description looks good!</div>
+          <!--Failure message (invalid-feedback)-->
+          <div class="invalid-feedback">Please enter a short description!</div>
+        </div>
+
+        <div class="mb-3">
+          <p>Original Listing Image</p>
+          <img src="<%= originalImageUrl %>" />
+        </div>
+
+        <!-- Image -->
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload New Image</label>
+          <input type="file" name="listing[image]" class="form-control" />
+          <!--Failure message (invalid-feedback)-->
+          <div class="invalid-feedback">
+            Please select appropriate image file to upload
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Price -->
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price</label>
+            <input
+              type="number"
+              name="listing[price]"
+              value="<%= listing.price %>"
+              class="form-control"
+              required
+            />
+            <!--Success message (valid-feedback)-->
+            <div class="valid-feedback">Price looks good!</div>
+            <!--Failure message (invalid-feedback)-->
+            <div class="invalid-feedback">Please enter valid price!</div>
+          </div>
+          <!--country-->
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              type="text"
+              name="listing[country]"
+              value="<%= listing.country %>"
+              class="form-control"
+              required
+            />
+            <!--Success message (valid-feedback)-->
+            <div class="valid-feedback">Country looks good!</div>
+            <!--Failure message (invalid-feedback)-->
+            <div class="invalid-feedback">Please enter a valid country</div>
+          </div>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            name="listing[location]"
+            value="<%= listing.location %>"
+            class="form-control"
+            required
+          />
+          <!--Success message (valid-feedback)-->
+          <div class="valid-feedback">Location looks good!</div>
+          <!--Failure message (invalid-feedback)-->
+          <div class="invalid-feedback">Please enter valid location</div>
+        </div>
+        <br />
+        <!-- Submit Button -->
+        <button class="btn btn-warning">Edit</button>
+      </form>
+      <br />
+    </div>
+  </div>
+</body>
