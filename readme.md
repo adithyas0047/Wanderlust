@@ -109,11 +109,6 @@ Then open: http://localhost:3000
 
 ![image](./image.png)
 
-## 🌐 Live Demo
-
-Check out the live hosted version here:
-👉 https://wanderlust-skz1.onrender.com/listings
-
 ## Future Improvements
 
 - ⭐ Add reviews & ratings for listings
