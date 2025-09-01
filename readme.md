@@ -124,4 +124,5 @@ Check out the live hosted version here:
 ## 👨‍💻 Author
 
 Adithya S
+
 LinkedIn: www.linkedin.com/in/adithya-s-027342237
