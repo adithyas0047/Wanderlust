@@ -111,7 +111,6 @@ Then open: http://localhost:3000
 
 ## Future Improvements
 
-- ⭐ Add reviews & ratings for listings
 - 💳 Implement booking system with payments
 - 👤 User profile management
 - 🔍 Advanced search & filtering options
