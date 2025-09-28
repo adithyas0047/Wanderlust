@@ -93,8 +93,7 @@ It allows users to browse, create, and manage travel listings with images, prici
 Then open: http://localhost:3000
 
 ## Project Structure
-
-    ```bash
+```bash
         wanderlust/
     │── models/          # Mongoose schemas
     │── routes/          # Express routes
@@ -103,7 +102,7 @@ Then open: http://localhost:3000
     │── app.js           # Main server file
     │── package.json
     │── .env             # Environment variables
-    ```
+```
 
 ## 📸 Screenshot
 
